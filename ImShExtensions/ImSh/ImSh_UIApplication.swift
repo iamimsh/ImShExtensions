@@ -11,7 +11,7 @@ import UIKit
 extension UIApplication {
     
     /// To get app icon image
-    var icon: UIImage? {
+    public var icon: UIImage? {
         guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? NSDictionary,
             let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? NSDictionary,
             let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? NSArray,

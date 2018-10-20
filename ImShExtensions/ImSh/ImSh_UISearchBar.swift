@@ -13,7 +13,7 @@ extension UISearchBar {
     /// To change text font
     ///
     /// - Parameter textFont: UIFont?
-    func change(textFont : UIFont?) {
+    public func change(textFont : UIFont?) {
         for view : UIView in (self.subviews[0]).subviews {
             if let textField = view as? UITextField {
                 textField.font = textFont

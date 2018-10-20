@@ -11,22 +11,22 @@ import UIKit
 extension Int {
     
     /// To convert number to days
-    var days: TimeInterval {
+    public var days: TimeInterval {
         return TimeInterval(self * 24 * 60 * 60)
     }
     
     /// To convert number to hours
-    var hours: TimeInterval {
+    public var hours: TimeInterval {
         return TimeInterval(self * 60 * 60)
     }
     
     /// To convert number to minutes
-    var minutes: TimeInterval {
+    public var minutes: TimeInterval {
         return TimeInterval(self * 60)
     }
     
     /// To convert number to string
-    func toString() -> String {
+    public func toString() -> String {
         return String(self)
     }
     

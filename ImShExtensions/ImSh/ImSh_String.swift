@@ -11,49 +11,49 @@ import UIKit
 extension String {
     
     /// To check if string is a number
-    var isNumber : Bool {
+    public var isNumber : Bool {
         get{
             return !self.isEmpty && self.rangeOfCharacter(from: NSCharacterSet.decimalDigits.inverted) == nil
         }
     }
 
     /// To convert string to Double
-    var getDouble: Double {
+    public var getDouble: Double {
         return Double(self) ?? 0.0
     }
 
     /// To convert string to Float
-    var getFloat: Float {
+    public var getFloat: Float {
         return Float(self) ?? 0.0
     }
 
     /// To get UIImage? with string as name
-    var getImage: UIImage? {
+    public var getImage: UIImage? {
         return UIImage(named: self)
     }
 
     /// To convert string to URL?
-    var getURL: URL? {
+    public var getURL: URL? {
         return URL(string: self)
     }
     
     /// To get first character of string
-    var first: String {
+    public var first: String {
         return String(prefix(1))
     }
     
     /// To get last character of string
-    var last: String {
+    public var last: String {
         return String(suffix(1))
     }
     
     /// To convert string with first character uppercased
-    var uppercaseFirst: String {
+    public var uppercaseFirst: String {
         return first.uppercased() + String(dropFirst())
     }
     
     /// To check if string is a valid email
-    var isValidEmail: Bool {
+    public var isValidEmail: Bool {
         do {
             let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}", options: .caseInsensitive)
             
@@ -69,7 +69,7 @@ extension String {
     ///   - width: CGFloat
     ///   - font: UIFont
     /// - Returns: CGFloat
-    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
+    public func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
@@ -82,7 +82,7 @@ extension String {
     ///   - height: CGFloat
     ///   - font: UIFont
     /// - Returns: CGFloat
-    func widthWithConstrainedHeight(height: CGFloat, font: UIFont) -> CGFloat {
+    public func widthWithConstrainedHeight(height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
@@ -92,7 +92,7 @@ extension String {
     /// To remove extra white spaces and new lines
     ///
     /// - Returns: String
-    func collapseWhitespace() -> String {
+    public func collapseWhitespace() -> String {
         let comp = components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty }
         return comp.joined(separator: " ")
     }
@@ -103,7 +103,7 @@ extension String {
     ///   - with: String
     ///   - allOf: String...
     /// - Returns: String
-    func clean(with: String, allOf: String...) -> String {
+    public func clean(with: String, allOf: String...) -> String {
         var string = self
         for target in allOf {
             string = string.replacingOccurrences(of: target, with: with)
@@ -131,7 +131,7 @@ extension String {
     ///
     /// - Parameter length: Int
     /// - Returns: String
-    static func randomString(length: Int) -> String {
+    static public func randomString(length: Int) -> String {
         
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
         let len = UInt32(letters.length)

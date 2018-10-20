@@ -11,32 +11,32 @@ import UIKit
 extension UIDevice {
     
     /// Screen size
-    static var screenSize: CGSize {
+    static public var screenSize: CGSize {
         return UIScreen.main.bounds.size
     }
     
     /// Screen width
-    static var screenWidth: CGFloat {
+    static public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
     
     /// Screen height
-    static var screenHeight: CGFloat {
+    static public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
     
     /// Device type
-    static var deviceType: UIUserInterfaceIdiom {
+    static public var deviceType: UIUserInterfaceIdiom {
         return UIDevice.current.userInterfaceIdiom
     }
     
     /// to check if device is iPhone
-    static var isIphone: Bool {
+    static public var isIphone: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
     
     /// To check if device is iPad
-    static var isIpad: Bool {
+    static public var isIpad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     

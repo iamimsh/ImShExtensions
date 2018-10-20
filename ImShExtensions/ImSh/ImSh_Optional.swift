@@ -11,12 +11,12 @@ import UIKit
 extension Optional {
  
     /// To get explicit string from optional
-    var explicit: String {
+    public var explicit: String {
         return (self as? String) ?? ""
     }
     
     /// To get explicit int from optional
-    var explicitInt: Int {
+    public var explicitInt: Int {
         return (self as? Int) ?? 0
     }
 }

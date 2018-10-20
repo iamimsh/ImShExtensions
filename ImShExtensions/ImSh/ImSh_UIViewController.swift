@@ -15,7 +15,7 @@ extension UIViewController {
     /// - Parameters:
     ///   - seconds: Double
     ///   - completion: Handler
-    func delaySec(_ seconds: Double, completion: @escaping () -> ()) {
+    public func delaySec(_ seconds: Double, completion: @escaping () -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             completion()
         }
@@ -26,7 +26,7 @@ extension UIViewController {
     /// - Parameters:
     ///   - block: Boolean
     ///   - autoUnblockTime: Double
-    func blockUI(block: Bool, autoUnblockTime: Double? = nil) {
+    public func blockUI(block: Bool, autoUnblockTime: Double? = nil) {
         let defApp = UIApplication.shared
         block ? defApp.beginIgnoringInteractionEvents() : defApp.endIgnoringInteractionEvents()
 
@@ -39,25 +39,25 @@ extension UIViewController {
     /// Tap gesture to dismiss keyboard
     ///
     /// - Returns: UITapGestureRecognizer
-    func tapG_dismissKeyboard() -> UITapGestureRecognizer {
+    public func tapG_dismissKeyboard() -> UITapGestureRecognizer {
         let tapG: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         return tapG
     }
     
     /// Dismiss keyboard
-    @objc func dismissKeyboard() {
+    @objc public func dismissKeyboard() {
         view.endEditing(true)
     }
     
     /// To get top view controller
-    static var top: UIViewController? {
+    static public var top: UIViewController? {
         get {
             return topViewController()
         }
     }
     
     /// To get root view controller
-    static var root: UIViewController? {
+    static public var root: UIViewController? {
         get {
             return UIApplication.shared.delegate?.window??.rootViewController
         }
@@ -67,7 +67,7 @@ extension UIViewController {
     ///
     /// - Parameter viewController: viewController
     /// - Returns: UIViewController?
-    static func topViewController(from viewController: UIViewController? = UIViewController.root) -> UIViewController? {
+    static public func topViewController(from viewController: UIViewController? = UIViewController.root) -> UIViewController? {
         if let tabBarViewController = viewController as? UITabBarController {
             return topViewController(from: tabBarViewController.selectedViewController)
         } else if let navigationController = viewController as? UINavigationController {
@@ -83,7 +83,7 @@ extension UIViewController {
     ///
     /// - Parameter urlString: String
     /// - Returns: Boolean
-    func openUrl(urlString: String) -> Bool {
+    public func openUrl(urlString: String) -> Bool {
         if let urlLink = URL(string: urlString) {
             if UIApplication.shared.canOpenURL(urlLink) {
                 if #available(iOS 10.0, *) {
@@ -101,7 +101,7 @@ extension UIViewController {
     /// - Parameters:
     ///   - number: String
     ///   - withPrompt: Boolean
-    func makeACall(number: String, withPrompt: Bool = false) {
+    public func makeACall(number: String, withPrompt: Bool = false) {
         if withPrompt {
             _ = self.openUrl(urlString: "telprompt://\(number)")
         } else {
@@ -112,14 +112,14 @@ extension UIViewController {
     /// To open rating in AppStore
     ///
     /// - Parameter appId: String
-    func openRatingInAppStore(appId: String) {
+    public func openRatingInAppStore(appId: String) {
         _ = self.openUrl(urlString: "https://itunes.apple.com/app/id\(appId)?mt=8&action=write-review")
     }
     
     /// To open app in AppStore
     ///
     /// - Parameter appId: String
-    func openAppStore(appId: String) {
+    public func openAppStore(appId: String) {
         let appStoreUrl = "https://itunes.apple.com/app/id\(appId)?mt=8"
         _ = self.openUrl(urlString: appStoreUrl)
     }
@@ -129,14 +129,14 @@ extension UIViewController {
     /// - Parameters:
     ///   - objectsAre: [Any]
     ///   - sender: AnyObject
-    func shareObjectsViaActivityVC(objectsAre: [Any], sender: AnyObject) {
+    public func shareObjectsViaActivityVC(objectsAre: [Any], sender: AnyObject) {
         let activityVC = UIActivityViewController(activityItems: objectsAre, applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = sender as? UIView
         self.present(activityVC, animated: true, completion: nil)
     }
     
     /// To print all the font names in the app
-    func writeFontNames() {
+    public func writeFontNames() {
         for familyName in UIFont.familyNames {
             print("#\(familyName)")
             for fontName in UIFont.fontNames(forFamilyName: familyName) {
@@ -148,7 +148,7 @@ extension UIViewController {
     /// To show/hide network indicator
     ///
     /// - Parameter show: Boolean
-    func networkIndicator(show: Bool) {
+    public func networkIndicator(show: Bool) {
         DispatchQueue.main.async {
             UIApplication.shared.isNetworkActivityIndicatorVisible = show
         }

@@ -13,7 +13,7 @@ extension UINavigationController {
     /// To pop one level
     ///
     /// - Parameter animated: Boolean
-    func pop(animated: Bool = true) {
+    public func pop(animated: Bool = true) {
         _ = self.popViewController(animated: animated)
     }
 
@@ -22,7 +22,7 @@ extension UINavigationController {
     /// - Parameters:
     ///   - viewController: AnyClass
     ///   - animated: Boolean
-    func pop(to viewController: AnyClass, animated: Bool = true) {
+    public func pop(to viewController: AnyClass, animated: Bool = true) {
         for vc in self.viewControllers {
             if vc.isKind(of: viewController.self) {
                 self.popToViewController(vc, animated: animated)

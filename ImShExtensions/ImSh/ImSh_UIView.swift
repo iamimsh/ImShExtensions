@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     /// To animate tap effect
-    func animateTap() {
+    public func animateTap() {
         UIView.animate(withDuration: 0.15, delay: 0, options: [], animations: {
             self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }, completion: { (_) in
@@ -24,14 +24,14 @@ extension UIView {
     /// To set semantic direction
     ///
     /// - Parameter direction: UISemanticContentAttribute
-    func setSemantic(direction: UISemanticContentAttribute) {
+    public func setSemantic(direction: UISemanticContentAttribute) {
         self.semanticContentAttribute = direction
     }
     
     /// To animate flashing effect
     ///
     /// - Parameter duration: Double
-    func startFlashing(withDuration duration: Double = 2) {
+    public func startFlashing(withDuration duration: Double = 2) {
         UIView.animate(withDuration: duration, delay: 0, options: [.beginFromCurrentState], animations: {
             self.alpha = 0.4
         }, completion: { (finished) in
@@ -46,7 +46,7 @@ extension UIView {
     /// - Parameters:
     ///   - toValue: CGFloat
     ///   - duration: CFTimeInterval
-    func rotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2) {
+    public func rotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2) {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         
         animation.toValue = toValue
@@ -63,7 +63,7 @@ extension UIView {
     ///   - toValue: CGFloat
     ///   - duration: CFTimeInterval
     ///   - completion: Handler
-    func animateRotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2, completion: ((Bool) -> Swift.Void)? = nil) {
+    public func animateRotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2, completion: ((Bool) -> Swift.Void)? = nil) {
         var rotateTrans = CGAffineTransform(rotationAngle: toValue)
         if toValue == 0 {
             rotateTrans = CGAffineTransform.identity
@@ -76,7 +76,7 @@ extension UIView {
     /// To animate fall effect
     ///
     /// - Parameter completion: Handler
-    func fall(completion: ((Bool) -> Swift.Void)? = nil) {
+    public func fall(completion: ((Bool) -> Swift.Void)? = nil) {
         let rotateTrans = CGAffineTransform(rotationAngle: -30)
         let fallTrans = CGAffineTransform(translationX: 10, y: 300)
         UIView.animate(withDuration: 0.9, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: [.curveEaseOut], animations: {
@@ -90,7 +90,7 @@ extension UIView {
     /// - Parameters:
     ///   - to: CGFloat
     ///   - completion: Handler
-    func fadeOut(to: CGFloat = 0.0, completion: ((Bool) -> Swift.Void)? = nil) {
+    public func fadeOut(to: CGFloat = 0.0, completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.animate(withDuration: 0.9, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: [.curveEaseOut], animations: {
             self.alpha = to
         }, completion: completion)
@@ -99,7 +99,7 @@ extension UIView {
     /// To animate fadein effect
     ///
     /// - Parameter completion: Handler
-    func fadeIn(completion: ((Bool) -> Swift.Void)? = nil) {
+    public func fadeIn(completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.animate(withDuration: 0.9, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: [.curveEaseOut], animations: {
             self.alpha = 1
         }, completion: completion)
@@ -110,7 +110,7 @@ extension UIView {
     /// - Parameters:
     ///   - toPercent: CGFloat
     ///   - completion: Handler
-    func shrinkOrGrow(toPercent: CGFloat, completion: ((Bool) -> Swift.Void)? = nil) {
+    public func shrinkOrGrow(toPercent: CGFloat, completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [.curveEaseInOut], animations: {
             self.transform = CGAffineTransform.init(scaleX: toPercent, y: toPercent)
         }, completion: nil)
@@ -123,7 +123,7 @@ extension UIView {
     ///   - duration: Duration of complete animation
     ///   - transitionOptions: ex: .transitionFlipFromBottom, .showHideTransitionViews
     ///   - completion: optional Boolean
-    func flip(toView: UIView, duration: TimeInterval, transitionOptions: UIView.AnimationOptions, completion: ((Bool) -> Swift.Void)? = nil) {
+    public func flip(toView: UIView, duration: TimeInterval, transitionOptions: UIView.AnimationOptions, completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.transition(with: self, duration: duration, options: transitionOptions, animations: {
             self.isHidden = true
         }, completion: nil)
@@ -133,7 +133,7 @@ extension UIView {
     }
     
     /// To animate shake effect
-    func shake() {
+    public func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = 0.6
@@ -144,7 +144,7 @@ extension UIView {
     /// To make self with shape
     ///
     /// - Parameter refImage: UIImage?
-    func maskOfShape(refImage: UIImage?) {
+    public func maskOfShape(refImage: UIImage?) {
         let mask = CALayer()
         mask.contents = refImage?.cgImage
         mask.frame = layer.bounds
@@ -154,7 +154,7 @@ extension UIView {
     /// To get a snapshot of self
     ///
     /// - Returns: UIImage
-    func getSnapshotImage() -> UIImage {
+    public func getSnapshotImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: false)
@@ -168,7 +168,7 @@ extension UIView {
     /// - Parameters:
     ///   - corners: UIRectCorner
     ///   - radius: CGFloat
-    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    public func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath

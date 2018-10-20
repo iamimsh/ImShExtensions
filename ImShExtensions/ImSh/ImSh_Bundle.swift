@@ -11,13 +11,13 @@ import Foundation
 extension Bundle {
     
     /// To get release version number
-    var releaseVersionNumber: String {
+    public var releaseVersionNumber: String {
         let relVer = infoDictionary?["CFBundleShortVersionString"] as? String
         return relVer ?? "1.0"
     }
     
     /// To get build version number
-    var buildVersionNumber: String {
+    public var buildVersionNumber: String {
         let buildVer = infoDictionary?["CFBundleVersion"] as? String
         return buildVer ?? "1"
     }

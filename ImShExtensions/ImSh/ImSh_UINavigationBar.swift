@@ -11,13 +11,13 @@ import UIKit
 extension UINavigationBar {
     
     /// To hide bottom line
-    func hideBottomHairline() {
+    public func hideBottomHairline() {
         let navigationBarImageView = hairlineImageViewInNavigationBar(self)
         navigationBarImageView!.isHidden = true
     }
     
     /// To show bottom line
-    func showBottomHairline() {
+    public func showBottomHairline() {
         let navigationBarImageView = hairlineImageViewInNavigationBar(self)
         navigationBarImageView!.isHidden = false
     }

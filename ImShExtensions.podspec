@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/iamimsh/ImShExtensions'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mohammed Imran' => 'iam_imsh@yahoo.com' }
-  s.source           = { :git => 'https://github.com/iamimsh/ImShExtensions.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/iamimsh/ImShExtensions.git', :tag => s.version.to_s, :commit => "3c7ab791b1d20cc880de1fa8eb23449a5d08c2fb" }
  
   s.ios.deployment_target = '10.0'
   s.source_files = 'ImShExtensions/ImSh/*.swift'

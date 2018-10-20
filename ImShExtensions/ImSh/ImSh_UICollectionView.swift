@@ -13,7 +13,7 @@ extension UICollectionView {
     /// To deselect all items
     ///
     /// - Parameter animated: Boolean
-    func deselectAllItems(animated: Bool = false) {
+    public func deselectAllItems(animated: Bool = false) {
         for indexPath in self.indexPathsForSelectedItems ?? [] {
             self.deselectItem(at: indexPath, animated: animated)
         }
@@ -24,7 +24,7 @@ extension UICollectionView {
     /// - Parameters:
     ///   - animated: Boolean
     ///   - scrollPosition: UICollectionView.ScrollPosition
-    func showNext(animated: Bool = true, scrollPosition: UICollectionView.ScrollPosition = .centeredHorizontally) {
+    public func showNext(animated: Bool = true, scrollPosition: UICollectionView.ScrollPosition = .centeredHorizontally) {
         guard let currentIndexPath = self.getCurrentIndexpath() else { return }
         let maxCells = self.numberOfItems(inSection: currentIndexPath.section)
         if maxCells == 0 { return }
@@ -41,7 +41,7 @@ extension UICollectionView {
     /// - Parameters:
     ///   - animated: Boolean
     ///   - scrollPosition: UICollectionView.ScrollPosition
-    func showPrevious(animated: Bool = true, scrollPosition: UICollectionView.ScrollPosition = .centeredHorizontally) {
+    public func showPrevious(animated: Bool = true, scrollPosition: UICollectionView.ScrollPosition = .centeredHorizontally) {
         guard let currentIndexPath = self.getCurrentIndexpath() else { return }
         let maxCells = self.numberOfItems(inSection: currentIndexPath.section)
         if maxCells == 0 { return }
@@ -56,7 +56,7 @@ extension UICollectionView {
     /// To get the current progress of UICollectionView
     ///
     /// - Returns: Float
-    func updatedProgress() -> Float {
+    public func updatedProgress() -> Float {
         guard let currentIndexPath = self.getCurrentIndexpath() else { return 0 }
         let currentCell = Float(currentIndexPath.row + 1)
         let maxCells = Float(self.numberOfItems(inSection: currentIndexPath.section))
@@ -67,7 +67,7 @@ extension UICollectionView {
     /// To get current displayed IndexPath?
     ///
     /// - Returns: IndexPath?
-    func getCurrentIndexpath() -> IndexPath? {
+    public func getCurrentIndexpath() -> IndexPath? {
         var visibleRect = CGRect()
         visibleRect.origin = self.contentOffset
         visibleRect.size = self.bounds.size

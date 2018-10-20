@@ -13,7 +13,7 @@ extension UITableView {
     /// To deselect all rows
     ///
     /// - Parameter animated: Boolean
-    func deselectAllRows(animated: Bool = false) {
+    public func deselectAllRows(animated: Bool = false) {
         for indexPath in self.indexPathsForSelectedRows ?? [] {
             self.deselectRow(at: indexPath, animated: animated)
         }
@@ -22,7 +22,7 @@ extension UITableView {
     /// Shakes the cell at defined indexPath
     ///
     /// - Parameter atIndexP: IndexPath
-    func shake(atIndexP: IndexPath) {
+    public func shake(atIndexP: IndexPath) {
         if let cell = self.cellForRow(at: atIndexP) {
             cell.shake()
         }
@@ -31,7 +31,7 @@ extension UITableView {
     /// To reload sections
     ///
     /// - Parameter withAnimation: UITableView.RowAnimation
-    func reloadSections(withAnimation: UITableView.RowAnimation) {
+    public func reloadSections(withAnimation: UITableView.RowAnimation) {
         self.reloadData()
         let sections = self.numberOfSections
         if sections == 0 { return }
