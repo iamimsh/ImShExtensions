@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/iamimsh/ImShExtensions.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
-  s.source_files = 'ImShExtensions/*.swift'
+  s.source_files = 'ImShExtensions/ImSh/*.swift'
  
 end
