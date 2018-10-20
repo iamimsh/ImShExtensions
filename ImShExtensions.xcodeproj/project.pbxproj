@@ -12,6 +12,19 @@
 		1D309508217B22640015AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D309506217B22640015AA36 /* Main.storyboard */; };
 		1D30950A217B22640015AA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D309509217B22640015AA36 /* Assets.xcassets */; };
 		1D30950D217B22640015AA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D30950B217B22640015AA36 /* LaunchScreen.storyboard */; };
+		1D309515217B22AC0015AA36 /* ImSh_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309514217B22AC0015AA36 /* ImSh_UIViewController.swift */; };
+		1D309519217B26D10015AA36 /* ImSh_UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309518217B26D10015AA36 /* ImSh_UINavigationController.swift */; };
+		1D30951B217B26F20015AA36 /* ImSh_UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30951A217B26F20015AA36 /* ImSh_UINavigationBar.swift */; };
+		1D30951D217B27C40015AA36 /* ImSh_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30951C217B27C40015AA36 /* ImSh_String.swift */; };
+		1D30951F217B29580015AA36 /* ImSh_UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30951E217B29580015AA36 /* ImSh_UICollectionView.swift */; };
+		1D309521217B29B00015AA36 /* ImSh_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309520217B29B00015AA36 /* ImSh_UITableView.swift */; };
+		1D309523217B2A040015AA36 /* ImSh_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309522217B2A040015AA36 /* ImSh_UIView.swift */; };
+		1D309525217B2AC90015AA36 /* ImSh_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309524217B2AC90015AA36 /* ImSh_Bundle.swift */; };
+		1D309527217B2AE20015AA36 /* ImSh_UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309526217B2AE20015AA36 /* ImSh_UIApplication.swift */; };
+		1D309529217B2B210015AA36 /* ImSh_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309528217B2B210015AA36 /* ImSh_UIDevice.swift */; };
+		1D30952B217B2D9B0015AA36 /* ImSh_Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30952A217B2D9B0015AA36 /* ImSh_Optional.swift */; };
+		1D30952D217B2DAA0015AA36 /* ImSh_Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30952C217B2DAA0015AA36 /* ImSh_Int.swift */; };
+		1D309531217B346D0015AA36 /* ImSh_UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309530217B346D0015AA36 /* ImSh_UISearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +35,19 @@
 		1D309509217B22640015AA36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D30950C217B22640015AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D30950E217B22640015AA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D309514217B22AC0015AA36 /* ImSh_UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIViewController.swift; sourceTree = "<group>"; };
+		1D309518217B26D10015AA36 /* ImSh_UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UINavigationController.swift; sourceTree = "<group>"; };
+		1D30951A217B26F20015AA36 /* ImSh_UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UINavigationBar.swift; sourceTree = "<group>"; };
+		1D30951C217B27C40015AA36 /* ImSh_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_String.swift; sourceTree = "<group>"; };
+		1D30951E217B29580015AA36 /* ImSh_UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UICollectionView.swift; sourceTree = "<group>"; };
+		1D309520217B29B00015AA36 /* ImSh_UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UITableView.swift; sourceTree = "<group>"; };
+		1D309522217B2A040015AA36 /* ImSh_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIView.swift; sourceTree = "<group>"; };
+		1D309524217B2AC90015AA36 /* ImSh_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_Bundle.swift; sourceTree = "<group>"; };
+		1D309526217B2AE20015AA36 /* ImSh_UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIApplication.swift; sourceTree = "<group>"; };
+		1D309528217B2B210015AA36 /* ImSh_UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIDevice.swift; sourceTree = "<group>"; };
+		1D30952A217B2D9B0015AA36 /* ImSh_Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_Optional.swift; sourceTree = "<group>"; };
+		1D30952C217B2DAA0015AA36 /* ImSh_Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_Int.swift; sourceTree = "<group>"; };
+		1D309530217B346D0015AA36 /* ImSh_UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UISearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,19 @@
 				1D309509217B22640015AA36 /* Assets.xcassets */,
 				1D30950B217B22640015AA36 /* LaunchScreen.storyboard */,
 				1D30950E217B22640015AA36 /* Info.plist */,
+				1D309514217B22AC0015AA36 /* ImSh_UIViewController.swift */,
+				1D309518217B26D10015AA36 /* ImSh_UINavigationController.swift */,
+				1D30951A217B26F20015AA36 /* ImSh_UINavigationBar.swift */,
+				1D30951C217B27C40015AA36 /* ImSh_String.swift */,
+				1D30951E217B29580015AA36 /* ImSh_UICollectionView.swift */,
+				1D309520217B29B00015AA36 /* ImSh_UITableView.swift */,
+				1D309522217B2A040015AA36 /* ImSh_UIView.swift */,
+				1D309524217B2AC90015AA36 /* ImSh_Bundle.swift */,
+				1D309526217B2AE20015AA36 /* ImSh_UIApplication.swift */,
+				1D309528217B2B210015AA36 /* ImSh_UIDevice.swift */,
+				1D30952A217B2D9B0015AA36 /* ImSh_Optional.swift */,
+				1D30952C217B2DAA0015AA36 /* ImSh_Int.swift */,
+				1D309530217B346D0015AA36 /* ImSh_UISearchBar.swift */,
 			);
 			path = ImShExtensions;
 			sourceTree = "<group>";
@@ -135,8 +174,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D309521217B29B00015AA36 /* ImSh_UITableView.swift in Sources */,
+				1D309515217B22AC0015AA36 /* ImSh_UIViewController.swift in Sources */,
 				1D309505217B22640015AA36 /* ViewController.swift in Sources */,
+				1D30951B217B26F20015AA36 /* ImSh_UINavigationBar.swift in Sources */,
+				1D30951F217B29580015AA36 /* ImSh_UICollectionView.swift in Sources */,
+				1D30952D217B2DAA0015AA36 /* ImSh_Int.swift in Sources */,
+				1D30952B217B2D9B0015AA36 /* ImSh_Optional.swift in Sources */,
+				1D309529217B2B210015AA36 /* ImSh_UIDevice.swift in Sources */,
+				1D309531217B346D0015AA36 /* ImSh_UISearchBar.swift in Sources */,
+				1D309519217B26D10015AA36 /* ImSh_UINavigationController.swift in Sources */,
 				1D309503217B22640015AA36 /* AppDelegate.swift in Sources */,
+				1D30951D217B27C40015AA36 /* ImSh_String.swift in Sources */,
+				1D309527217B2AE20015AA36 /* ImSh_UIApplication.swift in Sources */,
+				1D309523217B2A040015AA36 /* ImSh_UIView.swift in Sources */,
+				1D309525217B2AC90015AA36 /* ImSh_Bundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
