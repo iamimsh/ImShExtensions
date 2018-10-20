@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D309503217B22640015AA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309502217B22640015AA36 /* AppDelegate.swift */; };
-		1D309505217B22640015AA36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309504217B22640015AA36 /* ViewController.swift */; };
 		1D309508217B22640015AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D309506217B22640015AA36 /* Main.storyboard */; };
 		1D30950A217B22640015AA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D309509217B22640015AA36 /* Assets.xcassets */; };
 		1D30950D217B22640015AA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D30950B217B22640015AA36 /* LaunchScreen.storyboard */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		1D3094FF217B22640015AA36 /* ImShExtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImShExtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D309502217B22640015AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D309504217B22640015AA36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D309507217B22640015AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D309509217B22640015AA36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D30950C217B22640015AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,12 +78,19 @@
 		1D309501217B22640015AA36 /* ImShExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				1D309532217B3C720015AA36 /* ImSh */,
 				1D309502217B22640015AA36 /* AppDelegate.swift */,
-				1D309504217B22640015AA36 /* ViewController.swift */,
 				1D309506217B22640015AA36 /* Main.storyboard */,
 				1D309509217B22640015AA36 /* Assets.xcassets */,
 				1D30950B217B22640015AA36 /* LaunchScreen.storyboard */,
 				1D30950E217B22640015AA36 /* Info.plist */,
+			);
+			path = ImShExtensions;
+			sourceTree = "<group>";
+		};
+		1D309532217B3C720015AA36 /* ImSh */ = {
+			isa = PBXGroup;
+			children = (
 				1D309514217B22AC0015AA36 /* ImSh_UIViewController.swift */,
 				1D309518217B26D10015AA36 /* ImSh_UINavigationController.swift */,
 				1D30951A217B26F20015AA36 /* ImSh_UINavigationBar.swift */,
@@ -100,7 +105,7 @@
 				1D30952C217B2DAA0015AA36 /* ImSh_Int.swift */,
 				1D309530217B346D0015AA36 /* ImSh_UISearchBar.swift */,
 			);
-			path = ImShExtensions;
+			path = ImSh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +181,6 @@
 			files = (
 				1D309521217B29B00015AA36 /* ImSh_UITableView.swift in Sources */,
 				1D309515217B22AC0015AA36 /* ImSh_UIViewController.swift in Sources */,
-				1D309505217B22640015AA36 /* ViewController.swift in Sources */,
 				1D30951B217B26F20015AA36 /* ImSh_UINavigationBar.swift in Sources */,
 				1D30951F217B29580015AA36 /* ImSh_UICollectionView.swift in Sources */,
 				1D30952D217B2DAA0015AA36 /* ImSh_Int.swift in Sources */,
