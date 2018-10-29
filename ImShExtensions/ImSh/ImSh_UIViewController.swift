@@ -153,4 +153,12 @@ extension UIViewController {
             UIApplication.shared.isNetworkActivityIndicatorVisible = show
         }
     }
+    
+    public func showAlert(title: String?, message: String?, preferredStyle: UIAlertController.Style = .alert, handler: ((UIAlertAction) -> Swift.Void)? = nil) {
+        let alertController = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
+        let dismissAction = UIAlertAction.init(title: "Dismiss", style: .cancel, handler: handler)
+        alertController.addAction(dismissAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }

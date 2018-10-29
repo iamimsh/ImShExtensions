@@ -8,15 +8,26 @@
 
 import UIKit
 
-extension Optional {
- 
-    /// To get explicit string from optional
+extension Optional where Wrapped == String {
+
     public var explicit: String {
-        return (self as? String) ?? ""
+        return self ?? ""
     }
     
-    /// To get explicit int from optional
-    public var explicitInt: Int {
-        return (self as? Int) ?? 0
+}
+
+extension Optional where Wrapped == Int {
+    
+    public var explicit: Int {
+        return self ?? 0
     }
+    
+}
+
+extension Optional where Wrapped == CGFloat {
+    
+    public var explicit: CGFloat {
+        return self ?? 0.0
+    }
+    
 }

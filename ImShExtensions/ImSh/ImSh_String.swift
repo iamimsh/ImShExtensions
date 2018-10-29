@@ -147,4 +147,22 @@ extension String {
         return randomString
     }
     
+    /// String will be cached to UserDefaults with Key and Synchronized
+    ///
+    /// - Parameter key: String
+    public func cache(key: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(self, forKey: key)
+        defaults.synchronize()
+    }
+    
+    /// Cached string for the Key will be returned optionally
+    ///
+    /// - Parameter key: String
+    /// - Returns: String?
+    public static func cached(key: String) -> String? {
+        let defaults = UserDefaults.standard
+        return defaults.string(forKey: key)
+    }
+    
 }
