@@ -34,7 +34,7 @@ extension String {
 
     /// To convert string to URL?
     public var getURL: URL? {
-        return URL(string: self)
+        return URL(string: self.encodeUrl())
     }
     
     /// To get first character of string
@@ -50,6 +50,14 @@ extension String {
     /// To convert string with first character uppercased
     public var uppercaseFirst: String {
         return first.uppercased() + String(dropFirst())
+    }
+    
+    public func encodeUrl() -> String {
+        return self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+    }
+    
+    public func decodeUrl() -> String {
+        return self.removingPercentEncoding!
     }
     
     /// To check if string is a valid email

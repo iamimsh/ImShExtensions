@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D01A23E217C6C6D00735276 /* ImSh_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01A23D217C6C6D00735276 /* ImSh_Array.swift */; };
+		1D1CAE6B218AECE400EA7A7B /* ImSh_CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CAE6A218AECE400EA7A7B /* ImSh_CGFloat.swift */; };
 		1D309503217B22640015AA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D309502217B22640015AA36 /* AppDelegate.swift */; };
 		1D309508217B22640015AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D309506217B22640015AA36 /* Main.storyboard */; };
 		1D30950A217B22640015AA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D309509217B22640015AA36 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1D01A23D217C6C6D00735276 /* ImSh_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_Array.swift; sourceTree = "<group>"; };
+		1D1CAE6A218AECE400EA7A7B /* ImSh_CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_CGFloat.swift; sourceTree = "<group>"; };
 		1D3094FF217B22640015AA36 /* ImShExtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImShExtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D309502217B22640015AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D309507217B22640015AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1D7FFD272187231000CAB57A /* ImSh_UIAlertController.swift */,
 				1D7FFD292187239200CAB57A /* ImSh_UIImage.swift */,
 				1D7FFD2B2187240700CAB57A /* ImSh_IndexPath.swift */,
+				1D1CAE6A218AECE400EA7A7B /* ImSh_CGFloat.swift */,
 			);
 			path = ImSh;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				1D309521217B29B00015AA36 /* ImSh_UITableView.swift in Sources */,
 				1D7FFD282187231000CAB57A /* ImSh_UIAlertController.swift in Sources */,
+				1D1CAE6B218AECE400EA7A7B /* ImSh_CGFloat.swift in Sources */,
 				1D309515217B22AC0015AA36 /* ImSh_UIViewController.swift in Sources */,
 				1D30951B217B26F20015AA36 /* ImSh_UINavigationBar.swift in Sources */,
 				1D30951F217B29580015AA36 /* ImSh_UICollectionView.swift in Sources */,

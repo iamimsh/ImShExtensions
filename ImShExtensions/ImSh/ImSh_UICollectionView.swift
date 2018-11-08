@@ -76,4 +76,19 @@ extension UICollectionView {
         return self.indexPathForItem(at: visiblePoint)
     }
     
+    /// Set up UICollectionView with delegate, datasource and register NIB.
+    /// Note: Make sure to use same name for Nib and Reuse Identifier.
+    ///
+    /// - Parameters:
+    ///   - delegate: UICollectionViewDelegate?
+    ///   - dataSource: UICollectionViewDataSource?
+    ///   - cellNibWithReuseId: String?
+    public func setUp(delegate: UICollectionViewDelegate?, dataSource: UICollectionViewDataSource?, cellNibWithReuseId: String? = nil) {
+        if let nibReuseId = cellNibWithReuseId {
+            self.register(UINib.init(nibName: nibReuseId, bundle: nil), forCellWithReuseIdentifier: nibReuseId)
+        }
+        self.delegate = delegate
+        self.dataSource = dataSource
+    }
+    
 }

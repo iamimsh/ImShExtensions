@@ -11,7 +11,7 @@ import UIKit
 
 extension UIAlertController {
     
-    func addImage(image: UIImage?) {
+    public func addImage(image: UIImage?) {
         guard let image = image else { return }
         let maxSize = CGSize(width: 245, height: 300)
         let imgSize = image.size

@@ -10,11 +10,17 @@ import Foundation
 
 extension IndexPath {
     
-    static func zeroItem() -> IndexPath {
+    /// To get the Zeroth item
+    ///
+    /// - Returns: IndexPath
+    public static func zeroItem() -> IndexPath {
         return IndexPath(item: 0, section: 0)
     }
     
-    static func zeroRow() -> IndexPath {
+    /// To get the Zeroth row
+    ///
+    /// - Returns: IndexPath
+    public static func zeroRow() -> IndexPath {
         return IndexPath(row: 0, section: 0)
     }
     

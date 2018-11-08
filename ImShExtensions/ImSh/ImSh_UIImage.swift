@@ -11,7 +11,17 @@ import UIKit
 
 extension UIImage {
     
-    func imageWithSize(size: CGSize) -> UIImage {
+    public var width: CGFloat {
+        let widthInPoints = self.size.width
+        return widthInPoints * self.scale
+    }
+    
+    public var height: CGFloat {
+        let heightInPoints = self.size.height
+        return heightInPoints * self.scale
+    }
+
+    public func imageWithSize(size: CGSize) -> UIImage {
         var scaledImageRect = CGRect.zero
         
         let aspectWidth: CGFloat = size.width / self.size.width
@@ -30,6 +40,14 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return scaledImage!
+    }
+
+    /// To check if there are any transparency layers in the given image
+    ///
+    /// - Returns: Boolean
+    public func isTransparent() -> Bool {
+        guard let alpha: CGImageAlphaInfo = self.cgImage?.alphaInfo else { return false }
+        return alpha == .first || alpha == .last || alpha == .premultipliedFirst || alpha == .premultipliedLast
     }
 
 }
