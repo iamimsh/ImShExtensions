@@ -176,3 +176,44 @@ extension UIView {
     }
     
 }
+
+@IBDesignable
+public extension UIView {
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set (new) {
+            self.layer.cornerRadius = new
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return self.layer.borderWidth
+        }
+        set (new) {
+            self.layer.borderWidth = new
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor {
+        get {
+            return UIColor(cgColor: self.layer.borderColor ?? UIColor.white.cgColor)
+        }
+        set (new) {
+            self.layer.borderColor = new.cgColor
+        }
+    }
+    
+    @IBInspectable var isCircle: Bool {
+        get {
+            return self.layer.cornerRadius == (bounds.height / 2)
+        }
+        set (new) {
+            self.layer.cornerRadius = new ? (bounds.height / 2) : 0
+        }
+    }
+    
+}
