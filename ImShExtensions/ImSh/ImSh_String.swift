@@ -174,3 +174,24 @@ extension String {
     }
     
 }
+
+extension NSString {
+    
+    /// To get ranges for given pattern strings
+    ///
+    /// - Parameter Patterns: [String]
+    /// - Returns: [NSRange]
+    func ranges(of Patterns: [String]) -> [NSRange] {
+        var returnRanges = [NSRange]()
+        for Pattern in Patterns {
+            do {
+                let regex = try NSRegularExpression(pattern: Pattern, options: [])
+                returnRanges += regex.matches(in: self as String, options: [], range: NSMakeRange(0, (self as String).count)).map {$0.range}
+            } catch {
+                // DONT DO ANYTHING - SKIP
+            }
+        }
+        return returnRanges
+    }
+    
+}

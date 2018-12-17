@@ -29,6 +29,7 @@
 		1D7FFD282187231000CAB57A /* ImSh_UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FFD272187231000CAB57A /* ImSh_UIAlertController.swift */; };
 		1D7FFD2A2187239200CAB57A /* ImSh_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FFD292187239200CAB57A /* ImSh_UIImage.swift */; };
 		1D7FFD2C2187240700CAB57A /* ImSh_IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FFD2B2187240700CAB57A /* ImSh_IndexPath.swift */; };
+		1DC2DFF421C7EA3200A52C16 /* ImSh_UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2DFF321C7EA3200A52C16 /* ImSh_UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		1D7FFD272187231000CAB57A /* ImSh_UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIAlertController.swift; sourceTree = "<group>"; };
 		1D7FFD292187239200CAB57A /* ImSh_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIImage.swift; sourceTree = "<group>"; };
 		1D7FFD2B2187240700CAB57A /* ImSh_IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_IndexPath.swift; sourceTree = "<group>"; };
+		1DC2DFF321C7EA3200A52C16 /* ImSh_UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImSh_UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				1D7FFD292187239200CAB57A /* ImSh_UIImage.swift */,
 				1D7FFD2B2187240700CAB57A /* ImSh_IndexPath.swift */,
 				1D1CAE6A218AECE400EA7A7B /* ImSh_CGFloat.swift */,
+				1DC2DFF321C7EA3200A52C16 /* ImSh_UIImageView.swift */,
 			);
 			path = ImSh;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				1D01A23E217C6C6D00735276 /* ImSh_Array.swift in Sources */,
 				1D309531217B346D0015AA36 /* ImSh_UISearchBar.swift in Sources */,
 				1D309519217B26D10015AA36 /* ImSh_UINavigationController.swift in Sources */,
+				1DC2DFF421C7EA3200A52C16 /* ImSh_UIImageView.swift in Sources */,
 				1D309503217B22640015AA36 /* AppDelegate.swift in Sources */,
 				1D30951D217B27C40015AA36 /* ImSh_String.swift in Sources */,
 				1D309527217B2AE20015AA36 /* ImSh_UIApplication.swift in Sources */,
@@ -361,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCE83G4N32;
 				INFOPLIST_FILE = ImShExtensions/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCE83G4N32;
 				INFOPLIST_FILE = ImShExtensions/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

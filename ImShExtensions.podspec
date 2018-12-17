@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ImShExtensions'
-  s.version          = '1.0.3'
+  s.version          = '1.0.5'
   s.summary          = 'Useful extensions for UIViewController, UIView, and so on...'
  
   s.description      = <<-DESC
@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/iamimsh/ImShExtensions'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mohammed Imran' => 'iam_imsh@yahoo.com' }
-  s.source           = { :git => 'https://github.com/iamimsh/ImShExtensions.git', :tag => '1.0.3', :commit => "f5d971d6726982624d40747b53b2f8b271f9a018" }
+  s.source           = { :git => 'https://github.com/iamimsh/ImShExtensions.git', :tag => s.version.to_s, :commit => "5bc27e0d0089d5b981b5ab0f1603c301056e4a72" }
  
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'ImShExtensions/ImSh/*.swift'
  
 end
